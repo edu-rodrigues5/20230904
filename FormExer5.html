@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exercício 5</title>
+    <script lang="JavaScript">
+        var n1, n2, n3, n4, s, m;
+
+        function soma()
+        {
+        n1 = parseInt(document.frm.n1.value);
+        n2 = parseInt(document.frm.n2.value);
+        n3 = parseInt(document.frm.n3.value);
+        n4 = parseInt(document.frm.n4.value);
+
+        s = n1+n2+n3+n4;
+
+        m = s / 4
+
+        document.getElementById("alvo").innerHTML = "A média é igual a " + m;
+        }
+        
+    </script>
+</head>
+<body>
+   
+    <h1>Calcular e exibir a soma aritmética de 4 valores</h1>
+
+        <form name="frm">
+            1° nota <input type="text" name="n1" size="5" value="0"><br>
+            2° nota <input type="text" name="n2" size="5" value="0"><br>
+            3° nota <input type="text" name="n3" size="5" value="0"><br>
+            4° nota <input type="text" name="n4" size="5" value="0"><br>
+            <input type="button" name="btn" value="Somar" onclick="soma();">
+        </form>
+
+        <p id="alvo"></p>
+
+</body>
+</html>

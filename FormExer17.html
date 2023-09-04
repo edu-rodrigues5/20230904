@@ -1,0 +1,56 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exercício 17</title>
+
+    <script lang="JavaScript">
+
+        var n1, a, r;
+       
+    
+    function soma()
+    {
+    n1 = parseInt(document.frm.n1.value);
+
+    r = 1;
+
+    a = 0;
+   
+        
+            for(r = 1; r <= 10; r++)
+            {
+
+            a = r * n1;
+
+            document.getElementById(""+r+"").innerHTML = n1 + " x " + r + "  =  " + a + "<br>";
+            }
+           
+        
+    }
+    </script>
+</head>
+<body>
+
+    <h1>Tabuada</h1>
+        
+    <h3>Digite um número maior que zero</h3>
+
+    <form name="frm">
+        numero: <input type="text" name="n1" size="5" value="0"><br>
+        
+        <input type="button" value="Tabuada" name="btn" onclick="soma();"><br>
+    </form>
+
+    <p id="1"></p>
+    <p id="2"></p>
+    <p id="3"></p>
+    <p id="4"></p>
+    <p id="5"></p>
+    <p id="6"></p>
+    <p id="7"></p>
+    <p id="8"></p>
+    <p id="9"></p>
+    <p id="10"></p>
+
+</body>
+</html>

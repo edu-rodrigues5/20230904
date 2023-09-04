@@ -1,0 +1,68 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exercício 13</title>
+    
+    
+    <script lang="JavaScript">
+
+    function soma()
+    {
+        var a, b, c, bc, ca, ab;
+        
+        a = parseFloat(document.frm.n1.value);
+
+        b = parseFloat(document.frm.n2.value);
+
+        c = parseFloat(document.frm.n3.value);
+
+        bc = b + c;
+
+        ca = c + a;
+
+        ab = a + b;
+
+        if((a < bc) && (b < ca) && (c < ab))
+        {
+            if((a == b) && (b == c))
+            {
+                document.getElementById("alvo").innerHTML = "O triângulo é equilátero";
+                document.getElementById("img").src = "equilatero";
+            }
+            else
+            {
+                if((a != b) && (b != c) && (c != a))
+                {
+                    document.getElementById("alvo").innerHTML = "O triângulo é escaleno";
+                    document.getElementById("img").src = "escaleno";
+                }
+                else
+                {
+                    document.getElementById("alvo").innerHTML = "O triângulo é isóciles";
+                    document.getElementById("img").src = "isoceles";
+                }
+            }
+        }
+        else
+        {
+            document.getElementById("alvo").innerHTML = "Não existe um triângulo, verifique os dados";
+            document.getElementById("img").src = "#";
+        }
+    }
+    </script>
+</head>
+<body>
+
+        <h1>Classificação dos triângulos</h1>
+
+        <form name="frm">
+            1° lado <input type="text" name="n1" size="5" value="0"><br>
+            2° lado <input type="text" name="n2" size="5" value="0"><br>
+            3° lado <input type="text" name="n3" size="5" value="0"><br>
+            <input type="button" name="btn" value="Somar" onclick="soma();">
+        </form>
+
+        <p id="alvo"></p>
+        <img src="#" id="img">
+</body>
+</html>
